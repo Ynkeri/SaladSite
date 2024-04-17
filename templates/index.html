@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salads - Restaurants Category Bootstrap Responsive Website Template - Home : W3Layouts</title>
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-starter.css') }}">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/">Sa<i class="fas fa-utensil-spoon"></i>ads
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about-us">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/cart/all">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                    <div class="mode-container">
+                                        <i class="gg-sun"></i>
+                                        <i class="gg-moon"></i>
+                                    </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- banner section -->
+    <section id="home" class="w3l-banner py-5">
+        <div class="banner-content">
+            <div class="container py-4">
+                <div class="row align-items-center pt-sm-5 pt-4">
+                    <div class="col-md-6">
+                        <h3 class="mb-lg-4 mb-3 pb-lg-2">Fresh Healthy <span class="d-block">Delicious Salads</span>
+                        </h3>
+                        <p class="banner-sub">Healthy foods to eat everyday, Tasty and healthy vegetables salad
+                            with fresh tomatoes,
+                            coriander leaves and more.</p>
+                        <div class="d-flex align-items-center buttons-banner">
+                            <a href="/menu" class="btn btn-style mt-lg-5 mt-4">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 right-banner-2 text-end position-relative">
+                        <div class="sub-banner-image mx-auto">
+                            <img src="{{url_for('static', filename='images/banner1.png')}}" class="img-fluid position-relative" alt=" ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //banner section -->
+
+    <!-- about section -->
+    <section class="w3l-aboutblock py-5">
+        <div class="container py-md-5 py-4">
+            <div class="row">
+                <div class="col-lg-6 left-wthree-img position-relative mb-lg-0 mb-5 pb-lg-0 pb-5">
+                    <img src="{{url_for('static', filename='images/ab1.jpg')}}" alt="" class="img-fluid radius-image">
+                    <img src="{{url_for('static', filename='images/ab2.jpg')}}" alt=""
+                        class="img-fluid img-border position-absolute img-position radius-image me-xl-5">
+                </div>
+                <div class="col-lg-6 about-right-faq align-self ps-lg-5 mt-xl-4">
+                    <h3 class="text-bgs mb-2">Since 2000</h3>
+                    <h3 class="title-style">We Have <span>30+</span> Years of Experience</h3>
+                    <p class="ab-text mt-4 pt-lg-2">"Orem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                        ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Non quae, fugiat".</p>
+                    <p class="mt-4">Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Non quae, fugiat. Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+                        ultrices in ligula.</p>
+                    <img class="img-fluid mt-md-5 mt-4 img-dark-color" src="{{url_for('static', filename='images/sign.png')}}" alt=" ">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //about section -->
+
+    <!-- popular section -->
+    <section class="w3l-bottom-grids-6 pb-5">
+        <div class="container pb-md-5 pb-4">
+            <h3 class="title-style text-center mb-md-5 mb-4">Our <span>Popular</span> Salads</h3>
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-md-6 grids-feature">
+                    <div class="area-box">
+                        <img class="img-fluid" src="{{url_for('static', filename='images/s2.jpg')}}" alt=" ">
+                        <h4><a href="/menu" class="title-head">Green salad</a></h4>
+                        <p>A green salad is a crisp and refreshing dish featuring a mix of fresh leafy greens and assorted vegetables,
+                            lightly dressed for a burst of flavor and nutrients.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 grids-feature mt-md-0 mt-sm-5 mt-4">
+                    <div class="area-box active">
+                        <img class="img-fluid" src="{{url_for('static', filename='images/s1.jpg')}}" alt=" ">
+                        <h4><a href="/menu" class="title-head">Fruit salads</a></h4>
+                        <p>A fruit salad is a mix of fresh, bite-sized fruits, offering a refreshing and nutritious
+                            treat bursting with natural sweetness and vibrant colors.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 grids-feature mt-lg-0 mt-sm-5 mt-4">
+                    <div class="area-box">
+                        <img class="img-fluid" src="{{url_for('static', filename='images/s3.jpg')}}" alt=" ">
+                        <h4><a href="/menu" class="title-head">Dessert salads</a></h4>
+                        <p>A dessert salad is a sweet blend of fruits, marshmallows, and whipped cream,
+                            offering a light and indulgent treat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //popular section -->
+
+    <!-- content image section -->
+    <div class="content-image py-5">
+        <div class="container py-md-5 py-4">
+            <div class="row py-md-4">
+                <div class="col-md-9 col-sm-8 col-6 responsive-content">
+                    <h3 class="title-style">Our Restaurants <span>Menu</span></h3>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <p>Indulge in our restaurant's menu featuring a variety of expertly crafted salads,
+                                each bursting with freshness and flavor to satisfy your cravings for wholesome goodness.</p>
+                        </div>
+                        <div class="col-md-6 mt-md-0 mt-4">
+                            <p>Our restaurant's menu offers a delectable array of freshly prepared salads,
+                                meticulously crafted to tantalize your taste buds with vibrant flavors and
+                                nutritious ingredients.</p>
+                        </div>
+                    </div>
+                    <a href="/menu" class="btn btn-style mt-sm-5 mt-4">What's on the Menu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //content image section -->
+
+    <!-- 3 grids section -->
+    <div class="w3l-index-block4 pt-5">
+        <div class="container pt-md-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 features15-col-text">
+                    <a href="/about-us" class="d-flex feature-unit">
+                        <div class="col-2">
+                            <div class="features15-info">
+                                <i class="fas fa-apple-alt"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features15-para">
+                                <h4>Healthy Food</h4>
+                                <p>Healthy food fuels vitality with fresh, nutrient-rich ingredients like lean proteins,
+                                    whole grains, and colorful fruits and vegetables.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 features15-col-text">
+                    <a href="/about-us" class="d-flex feature-unit">
+                        <div class="col-2">
+                            <div class="features15-info">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features15-para">
+                                <h4>Fresh Salads</h4>
+                                <p>Fresh salads: Crisp, vibrant, and delicious mixes of veggies and greens.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 features15-col-text">
+                    <a href="/about-us" class="d-flex feature-unit">
+                        <div class="col-2">
+                            <div class="features15-info">
+                                <i class="fas fa-carrot"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features15-para">
+                                <h4>Natural Fiber</h4>
+                                <p>Natural fiber: Found in fruits, veggies, and whole grains, crucial for digestion and wellness.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 features15-col-text">
+                    <a href="/about-us" class="d-flex feature-unit">
+                        <div class="col-2">
+                            <div class="features15-info">
+                                <i class="fas fa-lemon"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features15-para">
+                                <h4>Nutritional Food</h4>
+                                <p>Rich in vital nutrients for health and vitality.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 features15-col-text">
+                    <a href="/about-us" class="d-flex feature-unit">
+                        <div class="col-2">
+                            <div class="features15-info">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features15-para">
+                                <h4>Protect Your Heart</h4>
+                                <p> Essential for maintaining cardiovascular health and well-being.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-6 features15-col-text">
+                    <a href="/about-us" class="d-flex feature-unit">
+                        <div class="col-2">
+                            <div class="features15-info">
+                                <i class="fas fa-weight"></i>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <div class="features15-para">
+                                <h4>Weight Control</h4>
+                                <p>Vital for managing weight and promoting a healthy lifestyle.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //3 grids section -->
+
+    <!-- chef section -->
+    <div class="w3l-chef pt-5">
+        <div class="container pt-4">
+            <div class="row align-items-center">
+                <div class="col-lg-7 pe-lg-5">
+                    <h3 class="title-style mb-4">Meet Our Best <span>Chef</span></h3>
+                    <p>Our salad restaurant is led by a talented chef who is passionate about creating culinary masterpieces
+                        with fresh and flavorful ingredients. With an expert touch, our chef transforms simple salads into
+                        works of art, balancing textures and flavors to perfection. Their dedication to quality and creativity
+                        ensures that each dish is not only delicious but also visually stunning, delighting customers with every bite.
+                        From classic combinations to innovative creations, our chef's expertise shines through, making dining at our salad
+                        restaurant a truly memorable experience.</p>
+                </div>
+                <div class="col-lg-5 img-bg-clr mt-lg-0 mt-4">
+                    <img src="{{url_for('static', filename='images/img2.png')}}" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //chef section -->
+
+    <!-- testimonials section -->
+    <section class="w3l-clients py-5" id="testimonials">
+        <div class="container py-md-5 py-4">
+            <div id="owl-demo2" class="owl-carousel owl-theme pb-5">
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>Pellen tesque libero ut justo</q>
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
+                        </div>
+                        <div class="bottom-info mt-4">
+                            <div class="people-info align-self">
+                                <h3>Johnson william</h3>
+                                <ul class="d-flex">
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                </ul>
+                            </div>
+                            <a class="comment-img mt-3" href="#url"><img src="{{url_for('static', filename='images/testi1.jpg')}}"
+                                    class="img-responsive" alt="placeholder image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>Lorem ipsum dolor sit amet</q>
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
+                        </div>
+                        <div class="bottom-info mt-4">
+                            <div class="people-info align-self">
+                                <h3>Johnson william</h3>
+                                <ul class="d-flex">
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                </ul>
+                            </div>
+                            <a class="comment-img mt-3" href="#url"><img src="{{url_for('static', filename='images/testi2.jpg')}}"
+                                    class="img-responsive" alt="placeholder image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>Pellen tesque libero ut justo</q>
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
+                        </div>
+                        <div class="bottom-info mt-4">
+                            <div class="people-info align-self">
+                                <h3>Johnson william</h3>
+                                <ul class="d-flex">
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                </ul>
+                            </div>
+                            <a class="comment-img mt-3" href="#url"><img src="{{url_for('static', filename='images/testi3.jpg')}}"
+                                    class="img-responsive" alt="placeholder image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>Lorem ipsum dolor sit amet</q>
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
+                        </div>
+                        <div class="bottom-info mt-4">
+                            <div class="people-info align-self">
+                                <h3>Johnson william</h3>
+                                <ul class="d-flex">
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                </ul>
+                            </div>
+                            <a class="comment-img mt-3" href="#url"><img src="{{url_for('static', filename='images/testi1.jpg')}}"
+                                    class="img-responsive" alt="placeholder image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>Pellen tesque libero ut justo</q>
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
+                        </div>
+                        <div class="bottom-info mt-4">
+                            <div class="people-info align-self">
+                                <h3>Johnson william</h3>
+                                <ul class="d-flex">
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                </ul>
+                            </div>
+                            <a class="comment-img mt-3" href="#url"><img src="{{url_for('static', filename='images/testi2.jpg')}}"
+                                    class="img-responsive" alt="placeholder image"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="testimonial-content">
+                        <div class="testimonial">
+                            <blockquote>
+                                <q>Lorem ipsum dolor sit amet.</q>
+                            </blockquote>
+                            <p>Lorem ipsum dolor sit amet elit. hic odio tenetur. ante ipsum primis in
+                                faucibus orci luctus et ultrices posuere,tesque libero ut justo Semper.</p>
+                        </div>
+                        <div class="bottom-info mt-4">
+                            <div class="people-info align-self">
+                                <h3>Johnson william</h3>
+                                <ul class="d-flex">
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                    <li><a href="#rating"><i class="fas fa-star"></i></a></li>
+                                </ul>
+                            </div>
+                            <a class="comment-img mt-3" href="#url"><img src="{{url_for('static', filename='images/testi3.jpg')}}"
+                                    class="img-responsive" alt="placeholder image"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //testimonials section -->
+
+    <!-- footer -->
+    <footer class="w3l-footer-22 py-5">
+        <div class="container py-md-5 py-4">
+            <div class="row sub-columns">
+                <div class="col-lg-4 col-sm-6 sub-one-left">
+                    <h6>About </h6>
+                    <p>Salad Restaurant: Where fresh ingredients meet culinary creativity for delicious,
+                        nutritious meals that satisfy your cravings and nourish your body.</p>
+                    <div class="columns-2">
+                        <ul class="social">
+                            </li>
+                            <li><a href="https://twitter.com/" title="twitter"><span class="fab fa-twitter"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="https://www.google.com/" title="google"><span class="fab fa-google-plus-g"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/ynkerii/" title="instagram"><span class="fab fa-instagram"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-4 pt-sm-0 pt-3">
+                    <h6 class="footer-title-29">Contact Info </h6>
+                    <ul class="lists-para-two">
+                        <li class="para-footer-li">
+                            <span class="fas fa-angle-right mr-2"></span>
+                            <p> Food, 10001, 5th
+                                Avenue, 06 lane street, NY - 62617.</p>
+                        </li>
+                        <li> <a href="tel:+1(21) 234 4567"><span class="fas fa-angle-right mr-2"></span>+1(30) 768
+                                8697</a></li>
+                        <li> <a href="mailto:info@example.com"><span
+                                    class="fas fa-angle-right mr-2"></span>sk8429176@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-4">
+                    <h6>Quick links</h6>
+                    <ul>
+                        <li><a href="/"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
+                        <li><a href="/about-us"><span class="fas fa-angle-right mr-2"></span>About</a>
+                        </li>
+                        <li><a href="/contact"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-4">
+                    <h6>Help & Support</h6>
+                    <ul>
+                        <li><a href="/contact"><span class="fas fa-angle-right mr-2"></span>Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- owl carousel -->
+    <script src="assets/js/owl.carousel.js"></script>
+    <!-- script for tesimonials carousel slider -->
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo2").owlCarousel({
+                loop: true,
+                nav: false,
+                margin: 50,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    736: {
+                        items: 1,
+                        nav: false
+                    },
+                    991: {
+                        items: 2,
+                        margin: 30,
+                        nav: false
+                    },
+                    1080: {
+                        items: 2,
+                        nav: false
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //script for tesimonials carousel slider -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="assets/js/theme-change.js"></script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!-- bootstrap -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme-change.js') }}"></script>
+    <!-- //bootstrap -->
+    <!-- //Js scripts -->
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salads - Restaurants Category Bootstrap Responsive Website Template - Home : W3Layouts</title>
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Template CSS Style link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-starter.css') }}">
+</head>
+<body>
+    <!-- header -->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="/">Sa<i class="fas fa-utensil-spoon"></i>ads
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about-us">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/menu">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/cart/all">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cont-ser-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                    <div class="mode-container">
+                                        <i class="gg-sun"></i>
+                                        <i class="gg-moon"></i>
+                                    </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+            </nav>
+        </div>
+    </header>
+    <!-- //header -->
+
+
+    <section class="w3l-menu-2 py-5">
+        <div class="container py-md-5 py-4">
+            <h3 class="title-style text-center mb-sm-5 mb-4">Your Cart</h3>
+            <div class="pricing-style-w3ls">
+                <div class="pricing-chart">
+                    {% for product in cart %}
+                    <div class="price-box btn-layout bt6">
+                        <div class="grid grid-column-2">
+                            <div class="column1 d-flex align-items-center">
+                                <a href="#img5">
+                                    <img src="{{product.img}}" width="60px" alt="" class="img-responsive" />
+                                </a>
+                                <div class="job-info">
+                                    <h6 class="pricehead"><a href="/menu">{{product.name}}</a></h6>
+                                    <p class="mt-1">
+                                        <style>
+                                                .button-container {
+                                                    display: flex;
+                                                    align-items: center;
+                                                }
+
+                                                .button-container form {
+                                                    margin-right: 8px;
+                                                }
+                                        </style>
+                                    </p>
+                                    <div class="button-container">
+                                        <form action="/cart/decrease/{{product.id}}" method="POST">
+                                            <button type="submit" class="btn btn-style btn-style-primary mt-lg-0 mt-4">-</button>
+                                        </form>
+                                        <p>Quantity - {{product.quantity}}</p>
+                                        <form action="/cart/add/{{product.id}}" method="POST">
+                                            <button type="submit" class="btn btn-style btn-style-primary mt-lg-0 mt-4">+</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column2 text-right mt-md-0 mt-4 d-flex align-items-center justify-content-end">
+                                <p class="mb-0" style="margin-right: 10px;">
+                                    <strong>
+                                        {{ product.total_price }}$
+                                    </strong>
+                                </p>
+                                <button style="background-color:red" onclick="removeProduct('{{ product.id }}')" class="btn btn-style btn-style-primary mt-lg-0 mt-4">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <h4 style="color:#f7783c">Total cart price: {{total_products_price}}$</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //menu section -->
+
+    <!-- footer -->
+    <footer class="w3l-footer-22 py-5">
+        <div class="container py-md-5 py-4">
+            <div class="row sub-columns">
+                <div class="col-lg-4 col-sm-6 sub-one-left">
+                    <h6>About </h6>
+                    <p>Salad Restaurant: Where fresh ingredients meet culinary creativity for delicious,
+                        nutritious meals that satisfy your cravings and nourish your body.</p>
+                    <div class="columns-2">
+                        <ul class="social">
+                            </li>
+                            <li><a href="https://twitter.com/" title="twitter"><span class="fab fa-twitter"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="https://www.google.com/" title="google"><span class="fab fa-google-plus-g"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                            <li><a href="https://www.instagram.com/ynkerii/" title="instagram"><span class="fab fa-instagram"
+                                        aria-hidden="true"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-sm-0 mt-4 pt-sm-0 pt-3">
+                    <h6 class="footer-title-29">Contact Info </h6>
+                    <ul class="lists-para-two">
+                        <li class="para-footer-li">
+                            <span class="fas fa-angle-right mr-2"></span>
+                            <p> Food, 10001, 5th
+                                Avenue, 06 lane street, NY - 62617.</p>
+                        </li>
+                        <li> <a href="tel:+1(21) 234 4567"><span class="fas fa-angle-right mr-2"></span>+1(30) 768
+                                8697</a></li>
+                        <li> <a href="mailto:info@example.com"><span
+                                    class="fas fa-angle-right mr-2"></span>sk8429176@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6 sub-two-right mt-lg-0 mt-4">
+                    <h6>Quick links</h6>
+                    <ul>
+                        <li><a href="/"><span class="fas fa-angle-right mr-2"></span>Home</a></li>
+                        <li><a href="/about-us"><span class="fas fa-angle-right mr-2"></span>About</a>
+                        </li>
+                        <li><a href="/contact"><span class="fas fa-angle-right mr-2"></span>Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-sm-6 sub-two-right pl-lg-5 mt-lg-0 mt-4">
+                    <h6>Help & Support</h6>
+                    <ul>
+                        <li><a href="/contact"><span class="fas fa-angle-right mr-2"></span>Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-level-up-alt" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //move top -->
+
+    <!-- common jquery plugin -->
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <!-- //common jquery plugin -->
+
+    <!-- owl carousel -->
+    <script src="assets/js/owl.carousel.js"></script>
+    <!-- script for tesimonials carousel slider -->
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo2").owlCarousel({
+                loop: true,
+                nav: false,
+                margin: 50,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1000,
+                autoplayHoverPause: false,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    736: {
+                        items: 1,
+                        nav: false
+                    },
+                    991: {
+                        items: 2,
+                        margin: 30,
+                        nav: false
+                    },
+                    1080: {
+                        items: 2,
+                        nav: false
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //script for tesimonials carousel slider -->
+
+    <!-- theme switch js (light and dark)-->
+    <script src="assets/js/theme-change.js"></script>
+    <!-- //theme switch js (light and dark)-->
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+
+    <!-- bootstrap -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/removeProduct.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme-change.js') }}"></script>
+    <!-- //bootstrap -->
+    <!-- //Js scripts -->
+
+</body>
+</html>
